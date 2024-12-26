@@ -1,2 +1,2 @@
-# CLib-DL_Indicator
- Universal library for outputting data to various LED indicators via the HT16K33 driver (uses the I2C interface) in C using the HAL library
+# DL_Indicator
+Универсальная библиотека для вывода данных на различные светодиодные индикаторы через драйвер HT16К33 (Интерфейс I2C) на языке Си с использованием библиотеки HAL
