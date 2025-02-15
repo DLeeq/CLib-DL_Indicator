@@ -294,6 +294,7 @@ const uint16_t ASCII_16SEG[96] = {
 	0xCC00, /* ~ */
 	0x0000, /* (del) */
 };
+
 uint8_t DL_intToStr(char* str, int32_t num)
 {
     uint8_t start = 0;
@@ -336,6 +337,13 @@ uint8_t DL_intToStr(char* str, int32_t num)
 uint8_t DL_floatToStr(char* str, float num, uint8_t precision)
 {
     if(precision > 6) precision = 6;
+
+    float addition = 0.51;
+    
+    for(uint8_t i = 0; i < precision; i++) 
+        addition /= 10;
+    
+    num += addition;
 
     uint8_t len = 0;
     int32_t whole_part = 0;
